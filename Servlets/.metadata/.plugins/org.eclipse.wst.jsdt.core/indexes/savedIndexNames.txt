@@ -1,8 +1,0 @@
-INDEX VERSION 1.4+D:\Desktop\SEM 6\Java Backend\Servlets\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-1335957431.index
-334262261.index
-2141173272.index
-3566396528.index
-3772679527.index
-1325810642.index
-4175600569.index

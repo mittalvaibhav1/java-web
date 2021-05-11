@@ -1,7 +1,0 @@
-package com.servletApp;
-
-import java.servlet.http.HttpServlet;
-
-public class AddServlet extends HttpServlet {
-
-}

@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import javax.servlet.http.Cookie;
 
 public class AddServlet extends HttpServlet {
 	public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
@@ -16,9 +17,9 @@ public class AddServlet extends HttpServlet {
 		int j = Integer.parseInt(req.getParameter("num2"));
 		int k = i + j;
 
-//		Session Management
-		HttpSession session = req.getSession();
-		session.setAttribute("k", k);
+//		Cookies
+		Cookie cookie = new Cookie("k", k+"");
+		res.addCookie(cookie);
 		res.sendRedirect("sq");
 		
 	}

@@ -13,13 +13,15 @@ public class AddServlet extends HttpServlet {
 	public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
 		int i = Integer.parseInt(req.getParameter("num1"));
 		int j = Integer.parseInt(req.getParameter("num2"));
-		
 		int k = i + j;
 		
-		// Request Dispatcher and Redirect
-		req.setAttribute("k", k);
-		RequestDispatcher rd = req.getRequestDispatcher("/sq");
-		rd.forward(req, res);
+//		Request Dispatcher
+//		req.setAttribute("k", k);
+//		RequestDispatcher rd = req.getRequestDispatcher("/sq");
+//		rd.forward(req, res);
+		
+//		Redirect
+		res.sendRedirect("sq?k="+k);
 		
 //		PrintWriter out = res.getWriter();
 //		out.println("The result is: " + k);

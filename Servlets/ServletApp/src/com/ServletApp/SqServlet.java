@@ -3,6 +3,8 @@ package com.ServletApp;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletContext;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -18,7 +20,13 @@ public class SqServlet extends HttpServlet {
 				k = Integer.parseInt(c.getValue());
 			}
 		}
+		// Contexts are shared by all the servlets!
+		// Config is unique for each servlet
+//		ServletContext ctx = getServletContext();
+		ServletConfig cg = getServletConfig();
+		String str = cg.getInitParameter("Name");
 		PrintWriter out = res.getWriter();
-		out.println(k + " is SQ");
+		out.println(str + " is SQ");
+		out.println();
 	}
 }

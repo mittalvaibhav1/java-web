@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" errorPage="error.jsp"%>
+    pageEncoding="UTF-8" errorPage="err.jsp"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,12 +8,7 @@
 </head>
 <body bgcolor="gainsboro">
 	<% 
-		try {
 			int lol = 10 / 0;
-		}
-		catch(Exception ex) {
-			out.println("Errorrr");
-		}
 	%>
 </body>
 </html>

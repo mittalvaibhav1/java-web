@@ -7,6 +7,13 @@
 <title>App | Welcome</title>
 </head>
 <body>
-
+	<%
+	response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP v1.1
+		if(session.getAttribute("username") == null) {
+			response.sendRedirect("login.jsp");
+		}
+	%>
+	<h1>Welcome, ${username}</h1>
+	<a href="videos.jsp"> Videos </a>
 </body>
 </html>

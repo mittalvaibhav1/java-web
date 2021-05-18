@@ -7,6 +7,15 @@
 <title>App | Videos</title>
 </head>
 <body>
-
+	<%
+	response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP v1.1
+		if(session.getAttribute("username") == null) {
+			response.sendRedirect("login.jsp");
+		}
+	%>
+	<p>Videos...</p>
+	<form action="logout">
+		<input type="submit" value="Logout" />
+	</form>
 </body>
 </html>

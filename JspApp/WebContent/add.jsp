@@ -7,8 +7,6 @@
 <title>add.jsp</title>
 </head>
 <body bgcolor="gainsboro">
-	<% 
-			int lol = 10 / 0;
-	%>
+	${name}
 </body>
 </html>

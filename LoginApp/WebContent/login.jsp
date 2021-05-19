@@ -11,6 +11,7 @@
 		response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // HTTP v1.1
 		response.setHeader("Pragma", "no-cache"); // HTTP v1.0
 		response.setHeader("Expires", "0"); // Proxies
+		
 		if(session.getAttribute("username") != null) {
 			response.sendRedirect("welcome.jsp");
 		}

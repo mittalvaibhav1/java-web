@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.LoginApp.dao.LoginDao;
+
 @WebServlet("/login")
 public class LoginServlet extends HttpServlet {
 	
@@ -15,7 +17,9 @@ public class LoginServlet extends HttpServlet {
 		String uname = request.getParameter("uname");
 		String pass = request.getParameter("pass");
 		
-		if(uname.equals("noddy") && pass.equals("makeway")) {
+		LoginDao dao = new LoginDao();
+		
+		if(dao.checkCredentials(uname, pass)) {
 			HttpSession session = request.getSession();
 			session.setAttribute("username", uname);
 			response.sendRedirect("welcome.jsp");
